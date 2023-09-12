@@ -67,4 +67,4 @@ if __name__ == "__main__":
     pd.DataFrame(x_train).to_csv(Xtrain_output_path, header=False, index=False)
     pd.DataFrame(x_test).to_csv(Xtest_output_path, header=False, index=False)
     pd.DataFrame(y_train).to_csv(ytrain_output_path, header=False, index=False)
-    pd.DataFrame(y_test).to_csv(ytest_output_path, header=False, index=False)
+    pd.DataFrame(y_test).to_csv(ytest_output_path, header=False, index=False)   
