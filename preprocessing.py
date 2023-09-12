@@ -28,10 +28,8 @@ if __name__ == "__main__":
     parser.add_argument("--train-test-split-ratio", type=float, default=0.2)
     args, _ = parser.parse_known_args()
     print(f"recieved args: {args}")
-    
-    input_data_path = os.path.join("/opt/ml/processing/input", "carclaims.csv")
-    
-    data = pd.read_csv(input_data_path)
+        
+    data = pd.read_csv(r"carclaims.csv")
     data = pd.DataFrame(data, columns=columns)
     
     data.loc[data["Age"] == 0, "Age"] = np.nan
@@ -57,10 +55,10 @@ if __name__ == "__main__":
     x_train, x_test, y_train, y_test = train_test_split(x,y, test_size=split_ratio, random_state=42)
     
     
-    Xtrain_output_path = os.path.join("/opt/ml/processing/train", "Xtrain.csv")
-    Xtest_output_path = os.path.join("/opt/ml/processing/train", "Xtest.csv")
-    ytrain_output_path = os.path.join("/opt/ml/processing/test", "ytrain.csv")
-    ytest_output_path = os.path.join("/opt/ml/processing/test", "ytest.csv")
+    Xtrain_output_path = os.path.join("E:\Project1/train", "Xtrain.csv")
+    Xtest_output_path = os.path.join("E:\Project1/train", "Xtest.csv")
+    ytrain_output_path = os.path.join("E:\Project1/test", "ytrain.csv")
+    ytest_output_path = os.path.join("E:\Project1/test", "ytest.csv")
    
     print("Saving features:")
     
